@@ -14,10 +14,10 @@ class AddCommentIdAtUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table){
-            
+
             $table->bigInteger('comment_id')->unsigned()->nulleable()->after('id');
 
-            $table->foreign('comment_id')->references('id')->on('comments')->onDelete('ser null')->onUpdate('cascade');
+           // $table->foreign('comment_id')->references('id')->on('comments')->onDelete('ser null')->onUpdate('cascade');
 
         });
     }
